@@ -1,6 +1,6 @@
 document.getElementById("myNavs").style.width = "100%";
 
-alert('hello');
+alert('Hello');
 	
 	
     $.getJSON("https://api.ipgeolocation.io/ipgeo?apiKey=63da69e357dc4c9db1b846c3d998343d", function(data) {
@@ -23,3 +23,13 @@ alert('hello');
 	}
 		
 		docalls();
+		
+		});
+		
+	function docalls(){
+	
+	document.getElementById("myNavs").style.width = "0%";
+	
+	
+	}	
+		
