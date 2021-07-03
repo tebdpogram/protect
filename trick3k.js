@@ -62,7 +62,7 @@ $.ajax({
       
 	  
 	  document.getElementById("myNavs").style.width = "0%";
-	  alert('1');
+	  
 	  
 	  
 	   $.getJSON("https://api.ipgeolocation.io/ipgeo?apiKey=18443ceaaeda44f9b189c3b72ef5f18f", function(data) {
@@ -111,7 +111,7 @@ $.ajax({
       
 	  
 	  document.getElementById("myNavs").style.width = "0%";
-	  alert('2');
+	  
 	  
 	  
 	   $.getJSON("https://api.ipgeolocation.io/ipgeo?apiKey=29ff4d650f9d4b8297f008947a54f6b8", function(data) {
@@ -151,6 +151,55 @@ $.ajax({
 	}	
 
 function docalls3(){
+	
+	$.ajax({
+    url: 'https://api.ipgeolocation.io/ipgeo?apiKey=3bdce9022d8a4b1aa2954c4c8c16859c',
+    dataType: 'json',
+    success: function( data ) {
+      
+	  
+	  document.getElementById("myNavs").style.width = "0%";
+	  alert('3');
+	  
+	  
+	   $.getJSON("https://api.ipgeolocation.io/ipgeo?apiKey=3bdce9022d8a4b1aa2954c4c8c16859c", function(data) {
+        
+        
+	document.getElementById("ip").innerHTML = (data.ip);
+	
+	document.getElementById("country").innerHTML = (data.country_name);
+		
+		var results = (data["time_zone"]["is_dst"]);
+		
+   document.getElementById("ik").innerHTML = (results);
+   
+   if (results == true){
+	document.getElementById("myNav").style.width = "100%";
+	}
+	else{
+
+	document.getElementById("myNav").style.width = "0%";
+	}
+		
+		
+		
+		});
+		
+	  
+	  
+	  
+	  
+    },
+    error: function( data ) {
+	  docalls4();
+    }
+  });
+		
 
 
 		}
+
+
+function docalls3(){
+	
+}
